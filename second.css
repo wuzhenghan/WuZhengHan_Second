@@ -1,0 +1,236 @@
+li{
+    list-style-type:none;
+}
+/* 显示区域 */
+#second{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+}
+/* 头部发文章那一行 */
+#head{
+    background-color: #fff;
+    height: 40px;
+}
+#head_span1,
+#head_span2,
+#head_span3{
+    text-align: center;
+    font-size: 26px;   
+}
+#head_span1{
+    padding-top: 8px;
+    padding-left: 10px;
+    float: left;
+}
+#head_span2{
+    margin-left: 126px;
+}
+#head_span3{
+    padding-top: 8px;
+    padding-right: 10px;
+    float: right;
+}
+/* 底部切换行 */
+#foot{
+    width: 384px;
+    height: 40px;
+    background-color: #fff;
+    /* position: absolute;
+    top: 728px; */
+    /* left: 0px;
+    bottom: 0px; */
+    position: fixed;
+    bottom: 0px;
+    display: none;
+    z-index: 10;
+}
+#foot span{
+    width: 128px;
+    font-size: 13px;
+    text-align: center;
+    float: left;
+}
+#menu{
+    width: 384px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.menu_div{
+    width: 54px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+}
+.page_part{
+    width: 384px;
+    height: 628px;
+}
+#recommend_page{
+    overflow-y: scroll;
+}
+#travel_page{
+    display: none;
+    overflow-y: scroll;
+}
+#food_page{
+    overflow-y: scroll;
+    display: none;
+}
+#fashion_page{
+    overflow-y: scroll;
+    display: none;
+}
+#beauty_page{
+    overflow-y: scroll;
+    display: none;
+}
+#efficience_page{
+    overflow-y: scroll;
+    display: none;
+}
+#skin_page{
+    overflow-y: scroll;
+    display: none;
+}
+#recommend_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#recommend_page_right{
+    width: 172px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#recommend_page_left_1{
+    width: 172px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#recommend_page_left_1 img{
+    width: 172px;
+}
+#recommend_page_left_p1{
+    width: 172px;
+    height: 22px;
+    overflow: hidden;
+}
+#recommend_page_left_1 #recommend_page_head{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: inline-block;
+}
+#travel_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#travel_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#food_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#food_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#fashion_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#fashion_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#beauty_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#beauty_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#efficience_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#efficience_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#skin_page_left{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#skin_page_right{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#second #recommend_page_left_1{
+    height: auto;
+}
+#recommend_page_left_11{
+    height: auto;
+}
+#like_numeber{
+    float: right;
+}
+#like{
+    float: right;
+    font-family: 'icomoon';
+}
+.likeone{
+    color: red;
+}
+.notlike{
+    color: black;
+}
+.foot_click{
+    color: blueviolet;
+}

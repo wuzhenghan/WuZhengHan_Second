@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first-login.css">
+    <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" href="third.css">
+    <link rel="stylesheet" href="center.css">
+    <link rel="stylesheet" href="data_page.css">
+    <link rel="stylesheet" href="follow_page.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="fans_page.css">
+    <link rel="stylesheet" href="recommend_page_main.css">
+    <link rel="stylesheet" href="search_page.css">
+    <link rel="stylesheet" href="other_center.css">
+    <link rel="stylesheet" href="chat_people.css">
+    <link rel="stylesheet" href="icon/style.css">
+    <link rel="stylesheet" href="icon1/style.css">
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="animate.js"></script>
+    <title>Document</title>
+    <script>
+        function previewHandle(fileDOM,preview_img) {
+            var file = fileDOM.files[0], // 获取文件
+            imageType = /^image\//,
+            img_reader = '';
+        // 文件是否为图片
+        //if (!imageType.test(file.type)) {
+        //    alert("请选择图片！");
+        //    return;
+        //}
+        // 判断是否支持FileReader    
+        if (window.FileReader) {
+            reader = new FileReader();
+        }
+        // IE9及以下不支持FileReader
+        else {
+            alert("您的浏览器不支持图片预览功能，如需该功能请升级您的浏览器！");
+            return;
+        }
+        // 读取完成    
+        reader.onload = function (event) {
+            // 获取图片DOM
+            var img = document.getElementById("preview_img");
+            // 图片路径设置为读取的图片    
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+    function portrait(fileDOM) {
+        var file = fileDOM.files[0], // 获取文件
+            imageType = /^image\//,
+            reader = '';
+        // 文件是否为图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        // 判断是否支持FileReader    
+        if (window.FileReader) {
+            reader = new FileReader();
+        }
+        // IE9及以下不支持FileReader
+        else {
+            alert("您的浏览器不支持图片预览功能，如需该功能请升级您的浏览器！");
+            return;
+        }
+        // 读取完成    
+        reader.onload = function (event) {
+            // 获取图片DOM
+            var img = document.getElementById("portrait_img");
+            // 图片路径设置为读取的图片    
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+    function data_bgc(fileDOM) {
+        var file = fileDOM.files[0], // 获取文件
+            imageType = /^image\//,
+            reader = '';
+        // 文件是否为图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        // 判断是否支持FileReader    
+        if (window.FileReader) {
+            reader = new FileReader();
+        }
+        // IE9及以下不支持FileReader
+        else {
+            alert("您的浏览器不支持图片预览功能，如需该功能请升级您的浏览器！");
+            return;
+        }
+        // 读取完成    
+        reader.onload = function (event) {
+            // 获取图片DOM
+            var img = document.getElementById("data_bgc");
+            // 图片路径设置为读取的图片    
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+    </script>
+</head>
+<body>
+    <div id="firstpart">
+        <div id="login">
+            <p id="title1">欢迎来到</p>
+            <p id="title2">小红书</p>
+            <img src="./picture/cartoon1.png" alt="" class="cartoon" id="cartoon1">
+            <img src="./picture/cartoon2.png" alt="" class="cartoon" id="cartoon2">
+            <img src="./picture/cartoon3.png" alt="" class="cartoon" id="cartoon3">
+            <p id="logintitle">登录</p>
+            <form action="#" method="post" id="login_form">
+                <input type="text" placeholder="账号" id="username">                
+                <input type="password" placeholder="密码" id="password">
+                <input type="submit" id="login_btn" value="登录">
+            </form>
+        </div>
+    </div>
+    <div id="second" style="display: none;">
+        <div id="head">
+            <span id="head_span3" style="font-family: 'icomoon';"></span>
+            <span id="head_span2">首页</span>
+            <span id="head_span1" style="font-family: 'icomoon';"></span>
+        </div>
+        <div id="menu">
+            <div class="menu_div" id="recommend"><p id="menu_div_p1" class="data_menu_p_click">推荐</p></div>
+            <div class="menu_div" id="travel"><p id="menu_div_p2">旅行</p></div>
+            <div class="menu_div" id="food"><p id="menu_div_p3">美食</p></div>
+            <div class="menu_div" id="fashion"><p id="menu_div_p4">时尚</p></div>
+            <div class="menu_div" id="beauty"><p id="menu_div_p5">美妆</p></div>
+            <div class="menu_div" id="efficience"><p id="menu_div_p6">高效</p></div>
+            <div class="menu_div" id="skin"><p id="menu_div_p7">护肤</p></div>
+        </div>
+        <div id="recommend_page" class="page_part">
+            <div id="recommend_page_left"></div>
+            <div id="recommend_page_right"></div>
+        </div>
+        <div id="travel_page" class="page_part">
+            <div id="travel_page_left"></div>
+            <div id="travel_page_right"></div>
+        </div>
+        <div id="food_page" class="page_part">
+            <div id="food_page_left"></div>
+            <div id="food_page_right"></div>
+        </div>
+        <div id="fashion_page" class="page_part">
+            <div id="fashion_page_left"></div>
+            <div id="fashion_page_right"></div>
+        </div>
+        <div id="beauty_page" class="page_part">
+            <div id="beauty_page_left"></div>
+            <div id="beauty_page_right"></div>
+        </div>
+        <div id="efficience_page" class="page_part">
+            <div id="efficience_page_left"></div>
+            <div id="efficience_page_right"></div>
+        </div>
+        <div id="skin_page" class="page_part">
+            <div id="skin_page_left"></div>
+            <div id="skin_page_right"></div>
+        </div>
+    </div>
+    <div id="foot">
+        <span id="foot1" class="foot_click"><p style="font-family: 'icomoon';"></p><p>首页</p></span>
+        <span id="foot2"><p style="font-family: 'icomoon';"></p><p>我的消息</p></span>
+        <span id="foot3"><p style="font-family: 'icomoon';"></p><p>个人中心</p></span>
+    </div>
+    <div id="third">
+        <div id="third_head">
+            <span id="third_span1"></span>
+        </div>
+        <div id="article">
+            <div id="picture" style="height: 120px;">
+                
+            </div>
+            <div id="btn_pre_div">
+                +
+                <input type=file id="btn_pre">
+            </div>
+            <div id="title">
+                <!-- <input type="text" id="title_input"> -->
+                <textarea name="" id="title_input" cols="30" rows="10" placeholder="标题行"></textarea>
+            </div>
+            <hr>
+            <div id="content">
+                <!-- <input type="text" id="content_input"> -->
+                <textarea name="" id="content_input" cols="30" rows="10" placeholder="这是内容行"></textarea>
+            </div>
+            <div id="tag">
+                <textarea name="" id="tag_input" cols="30" rows="10" placeholder="tag行(例：高效，中间隔一个，)~"></textarea>
+            </div>
+        </div>
+        <button id="article_btn">发布文章</button>
+    </div>
+    <div id="center" style="display: none;">
+        <div id="log_out"></div>
+        <div id="header">
+            <img src="./picture/login_bg1.jpg" alt="" id="header_img">
+            <span id="header_span"></span>
+        </div>
+        <div id="center_number">
+            <div class="center_three" id="center_follow"><span>关注</span><span id="follow_number"></span></div>
+            <div class="center_three" id="center_fans"><span>粉丝</span><span id="fans_number"></span></div>
+            <div class="center_three" id="center_collection"><span>点赞和收藏</span><span id="collection_number"></span></div>
+            <div id="data">编辑资料</div>
+        </div>
+        <div id="data_menu">
+            <div id="data_menu1"><p id="data_menu1_p" class="data_menu_p_click">笔记</p></div>
+            <div id="data_menu2"><p id="data_menu2_p">收藏</p></div>
+            <div id="data_menu3"><p id="data_menu3_p">赞过</p></div>
+        </div>
+        <div id="note_part">
+            <div id="note_part_left"></div>
+            <div id="note_part_right"></div>
+        </div>
+        <div id="collection_part">
+            <div id="collection_part_left"></div>
+            <div id="collection_part_right"></div>
+        </div>
+        <div id="liked_part">
+            <div id="liked_part_left"></div>
+            <div id="liked_part_right"></div>
+        </div>
+    </div>
+    <div id="data_page">
+        <div id="data_head">
+            <div id="data_back"></div>
+            <span id="data_span1">编辑资料</span>
+        </div>
+        <div id="data_portrait">
+            <img src="" alt="" id="portrait_img">
+            <input type="file" id="portrait_input" onchange="portrait(this)">
+        </div>
+        <div id="data_user">
+            <div class="data_user1" id="data_nickname">
+                <span>名字</span><input type="text" id="data_nickname_input" dir="rtl">
+            </div>
+            <div class="data_user1" id="data_gender">
+                <span>性别</span><input type="text" id="data_gender_input" dir="rtl">
+            </div>
+            <div class="data_user1" id="data_birthday">
+                <span>生日</span><input type="text" id="data_birthday_input" dir="rtl">
+            </div>
+            <div class="data_user1" id="data_area">
+                <span>地区</span><input type="text" id="data_area_input" dir="rtl">
+            </div>
+            <div class="data_user1" id="data_description">
+                <span>简介</span><input type="text" id="data_description_input" dir="rtl">
+            </div>
+            <div class="data_user1">
+                <span>背景图</span><img src="" alt="" id="data_bgc">
+                <input type="file" id="data_bgc_input" onchange="data_bgc(this)">
+            </div>
+        </div>
+    </div>
+    <div id="follow_page">
+        <div id="follow_back"></div>
+        <span id="follow_people">关注的人</span>
+        <div id="follow_page_main"></div>
+    </div>
+    <div id="fans_page">
+        <div id="fans_back"></div>
+        <span id="fans_people">粉丝</span>
+        <div id="fans_page_main"></div>
+    </div>
+    <div id="recommend_page_main">
+        <div id="recommend_page_main_header">
+            <div id="recommend_page_main_back"></div>
+            <img src="./picture/cartoon1.png" alt="" id="recommend_page_main_head">
+            <span id="recommend_page_main_nickname"></span>
+            <button id="recommend_page_main_btn">已关注</button>
+        </div>
+        <div id="recommend_page_main_picture">
+            <ul id="recommend_page_main_picture_ul">
+                
+            </ul>
+        </div>
+        <ol id="circle">
+            
+        </ol>
+        <div id="recommend_page_main_title">
+            <p id="recommend_page_main_title_p"></p>
+        </div>
+        <div id="recommend_page_main_content">
+            <p id="recommend_page_main_content_p"></p>
+        </div>
+        <div id="recommend_page_main_tag">
+            <span id="recommend_page_main_tag_span1">#</span>
+            <span id="recommend_page_main_tag_span2"></span>
+        </div>
+        <div id="recommend_page_main_bottom">
+            <span id="recommend_page_main_bottom_span1"></span>
+            <button id="recommend_page_main_bottom_span2">不喜欢</button>
+        </div>
+        <div id="recommend_page_main_discussion_number">
+            <span>共</span>
+            <span id="recommend_page_main_discussion_number_num"></span>
+            <span>条评论</span>
+        </div>
+        <div id="recommend_page_main_discuss">
+            <img src="./picture/cartoon1.png" alt="" id="recommend_page_main_discuss_head">        
+            <input type="text" id="recommend_page_main_discuss_input" placeholder="说点什么吧！万一火了呢！">
+        </div>
+        <div id="recommend_page_main_discussion"></div>
+        <div id="recommend_page_main_search_bottom">
+            <input type="text" id="recommend_page_main_search_bottom_input" placeholder="说点什么....">          
+            <div id="recommend_page_main_search_bottom_collection">
+                <span id="recommend_page_main_search_bottom_collection_span"></span>
+                <span id="recommend_page_main_search_bottom_collection_number"></span>
+            </div>
+            <div id="recommend_page_main_search_bottom_like">
+                <span id="recommend_page_main_search_bottom_like_span"></span>
+                <span id="recommend_page_main_search_bottom_like_number"></span>
+            </div>
+            <div id="recommend_page_main_search_bottom_discuss">
+                <span id="recommend_page_main_search_bottom_discuss_span"></span>
+                <span id="recommend_page_main_search_bottom_discuss_number"></span>
+            </div>
+        </div>
+        <div id="click_search">
+            <div id="click_search_headdiv"></div>
+            <div id="click_search_bottomdiv">
+                <input type="text" id="click_search_bottomdiv_input" placeholder="喜欢就给个评论支持一下~">
+                <button id="click_search_bottomdiv_btn">发布</button>
+            </div>
+        </div>
+        <div id="click_search2">
+            <div id="click_search_headdiv2"></div>
+            <div id="click_search_bottomdiv2">
+                <input type="text" id="click_search_bottomdiv_input2" placeholder="喜欢就给个评论支持一下~">
+                <button id="click_search_bottomdiv_btn2">发布</button>
+            </div>
+        </div>
+    </div>
+    <div id="search_page">
+        <div id="search_page_head">
+            <span id="search_page_head_back"></span>
+            <input type="text" placeholder="请输入内容" id="search_page_head_input">
+            <button id="search_page_head_btn">搜索</button>
+        </div>
+        <div id="search_page_menu">
+            <div id="search_page_menu_article"><p id="search_page_menu_article_p" class="data_menu_p_click">文章</p></div>
+            <div id="search_page_menu_user"><p id="search_page_menu_user_p">用户</p></div>
+        </div>
+        <div id="search_page_article" style="display: block;">
+            <div id="search_page_article_left"></div>
+            <div id="search_page_article_right"></div>
+        </div>
+        <div id="search_page_user" style="display: none;"></div>
+    </div>
+    <div id="news">
+        <div id="news_head">
+            <span id="news_head_title">消息</span>
+            <span id="news_head_create">创建聊天</span>
+        </div>
+        <div id="news_menu">
+            <div class="news_menu_iconpart" id="news_menu_iconpart1"><p id="news_menu_iconpart_icon" style="color: pink;"></p><p>赞和收藏</p></div>
+            <div class="news_menu_iconpart" id="news_menu_iconpart2"><p id="news_menu_iconpart_icon" style="color: green;"></p><p>评论和@</p></div>
+            <div class="news_menu_iconpart" id="news_menu_iconpart3"><p id="news_menu_iconpart_icon" style="color: blue;"></p><p>新增关注</p></div>
+        </div>
+        <div id="news_main">
+
+        </div>
+    </div>
+    <div id="news_menu_iconpart1_1">
+        <div id="news_menu_iconpart1_1_head">
+            <span id="news_menu_iconpart1_1_head_back"></span>
+            <span id="news_menu_iconpart1_1_head_title">赞和收藏</span>
+        </div>
+        <div id="news_menu_iconpart1_1_main">
+            
+        </div>
+    </div>
+    <div id="news_menu_iconpart2_1">
+        <div id="news_menu_iconpart2_1_head">
+            <span id="news_menu_iconpart2_1_head_back"></span>
+            <span id="news_menu_iconpart2_1_head_title">评论和@</span>
+        </div>
+        <div id="news_menu_iconpart2_1_main">
+            
+        </div>
+    </div>
+    <div id="news_menu_iconpart3_1">
+        <div id="news_menu_iconpart3_1_head">
+            <span id="news_menu_iconpart3_1_head_back"></span>
+            <span id="news_menu_iconpart3_1_head_title">新增关注</span>
+        </div>
+        <div id="news_menu_iconpart3_1_main">
+            
+        </div>
+    </div>
+    <div id="other_center" style="display: none;">
+        <div id="other_back"></div>
+        <div id="header1">
+            <img src="./picture/login_bg1.jpg" alt="" id="header_img1">
+            <span id="header_span1"></span>
+        </div>
+        <div id="center_number1">
+            <div class="center_three1" id="center_follow1"><span>关注</span><span id="follow_number1"></span></div>
+            <div class="center_three1" id="center_fans1"><span>粉丝</span><span id="fans_number1"></span></div>
+            <div class="center_three1" id="center_collection1"><span>点赞和收藏</span><span id="collection_number1"></span></div>
+            <div id="data1">发消息</div>
+        </div>
+        <div id="data_menu111">
+            <div id="data_menu11"><p id="data_menu1_p1" class="data_menu_p_click">笔记</p></div>
+            <div id="data_menu21"><p id="data_menu2_p1">收藏</p></div>
+            <div id="data_menu31"><p id="data_menu3_p1">赞过</p></div>
+        </div>
+        <div id="note_part1">
+            <div id="note_part_left1"></div>
+            <div id="note_part_right1"></div>
+        </div>
+        <div id="collection_part1">
+            <div id="collection_part_left1"></div>
+            <div id="collection_part_right1"></div>
+        </div>
+        <div id="liked_part1">
+            <div id="liked_part_left1"></div>
+            <div id="liked_part_right1"></div>
+        </div>
+    </div>
+    <div id="chat_people">
+        <div id="chat_people_back"></div>
+        <div id="chat_people_content">
+
+        </div>
+    </div>
+    <div id="chat_page">
+        <div id="chat_page_head">
+            <div id="chat_page_back"></div>
+            <div id="chat_man_nickname">123</div>
+        </div>
+        <div id="chat_page_content">
+            <div id="chat_page_content_content"></div>
+            <div id="chat_page_content_bottom">
+                <input type="text" id="chat_page_content_input">
+                <button id="chat_page_content_btn">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

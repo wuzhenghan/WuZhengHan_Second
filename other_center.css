@@ -1,0 +1,140 @@
+#center{
+    width: 384px;
+    height: 728px;
+    display: none;
+    position: relative;
+}
+#header1{
+    width: 384px;
+    height: 120px;
+    position: relative;
+}
+#header_img1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+#header_span1{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 180px;
+    top: 30px;
+    font-size: 33px;
+}
+#center_number1{
+    width: 384px;
+    height: 57px;
+    position: relative;
+}
+#data1{
+    width: 80px;
+    height: 30px;
+    background-color: #fff;
+    border: black 1px solid;
+    border-radius: 5px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+.center_three1{
+    float: left;
+    color: #fff;
+    width: 80px;
+    height: 57px;
+    text-align: center;
+    line-height: 75px;
+    position: relative;
+    color: grey;
+}
+#follow_number1{
+    position: absolute;
+    left: 32px;
+    top: -20px;
+}
+#fans_number1{
+    position: absolute;
+    left: 32px;
+    top: -20px;
+}
+#collection_number1{
+    position: absolute;
+    left: 32px;
+    top: -20px;
+}
+#data_menu111{
+    width: 384px;
+    height: 60px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 15px;
+}
+#data_menu11,
+#data_menu21,
+#data_menu31{
+    float: left;
+    width: 128px;
+    height: 60px;
+}
+#data_menu1_p1,
+#data_menu2_p1,
+#data_menu3_p1{
+    width: 40px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    margin: 0 auto;
+}
+.data_menu_p_click{
+    color: blueviolet;
+    border-bottom: 1px solid blueviolet;
+}
+#note_part1{
+    width: 384px;
+    height: 445px;
+    overflow-y: scroll;
+    display: block;
+}
+#note_part_left1,
+#note_part_right1{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#center_follow1{
+    color: blueviolet;
+}
+#collection_part1{
+    width: 384px;
+    height: 445px;
+    overflow-y: scroll;
+    display: none;
+}
+#collection_part_left1,
+#collection_part_right1{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#liked_part1{
+    width: 384px;
+    height: 445px;
+    overflow-y: scroll;
+    display: none;
+}
+#liked_part_left1,
+#liked_part_right1{
+    width: 172px;
+    background-color: #fff;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}

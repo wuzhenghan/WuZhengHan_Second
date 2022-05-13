@@ -1,0 +1,115 @@
+#third{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+}
+/* 头部样式 */
+#third_head{
+    width: 384px;
+    height: 40px;
+    background-color: #fff;
+}
+#title{
+    width: 384px;
+    height: 40px;
+    background-color: green;
+}
+#article{
+    overflow-y: scroll;
+    height: 695px;
+}
+#article_btn{
+    width: 384px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+#picture{
+    position: relative;
+    width: 382px;
+    border: 1px solid #000;
+}
+#picture_input{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#preview_img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#picture_div{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+#title_input{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 362px;
+    height: 40px;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid #000;
+}
+#content_input{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 362px;
+    height: 250px;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid #000;
+}
+#tag_input{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 362px;
+    height: 40px;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid #000;
+}
+#btn_pre{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+}
+#picture img{
+    display: inline-block;
+    width: 117px;
+    height: 117px;
+    margin-right: 5px;
+    margin-left: 3px;
+}
+#btn_pre_div{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    font-size: 160px;
+    text-align: center;
+    line-height: 90px;
+    background-color: grey;
+    top: 40px;
+    left: 0px;
+}
+#third_span1{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    position: absolute;
+    left: 0px;
+    z-index: 50;
+    font-family: 'icomoon';
+    font-size: 40px;
+}

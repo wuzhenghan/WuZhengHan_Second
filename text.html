@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type=file id="btn_pre">
+    <img src="" alt="">
+<script>
+window.onload = function () {
+    var picture=document.querySelector('#picture')
+    var file = document.getElementById("btn_pre");
+    file.onchange = function () {
+        var img = document.createElement("img")
+        img.src = window.URL.createObjectURL(file.files[0])
+        img.onload = function () {
+            window.URL.revokeObjectURL(this.src)
+        }
+        document.body.appendChild(img)
+    }
+}
+</script>
+</body>
+</html>
+window.onload = function () {
+    var picture=document.querySelector('#picture')
+    var file = document.getElementById("btn_pre");
+    var btn_pre_div = document.getElementById("btn_pre_div");
+    var index=1
+    file.onchange = function (e) {
+        let files=e.target.files
+        console.log(files[0]);
+        let formData = new FormData()
+        formData.append('image',files[0])
+        var url_array=new Array()
+        var i
+        var url='http://175.178.193.182:8080/upload/image'
+        axios.post(url,formData).then(function(res){
+            console.log(res);
+            console.log(res.data.url);
+            localStorage.setItem('url_data',res.data.url)
+        })
+        var url_data=localStorage.getItem('url_data')
+        console.log(url_data);
+        url_array.push(url_data)
+        console.log(url_array);
+        console.log(url_array.length);
+        //url_array[i]=url_data
+        //i++
+        //console.log(url_array[i]);
+        var img = document.createElement("img")
+        img.setAttribute('index',index)
+        console.log(index);
+        /* picture.style.height=120+'px'+120*index+'px'
+            console.log(picture.style.height); */
+        if(index%3==0){
+            file.style.left=0+'px'
+            file.style.top=index*42+'px'-130+'px'
+            btn_pre_div.style.left=0+'px'
+            btn_pre_div.style.top=index*42+'px'
+            console.log(file.style.top);
+        }else{
+            file.style.left=index%3*130+'px'-130+'px'
+            btn_pre_div.style.left=index%3*130+'px'
+            console.log(file.style.left);
+        }
+        index++
+        img.src = window.URL.createObjectURL(file.files[0])
+        img.onload = function () {
+            window.URL.revokeObjectURL(this.src)
+        }
+        picture.appendChild(img)
+    }
+}

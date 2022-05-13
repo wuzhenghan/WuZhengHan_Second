@@ -1,0 +1,51 @@
+#follow_page{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+}
+#follow_back{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 40px;
+}
+#follow_people{
+    text-align: center;
+    font-size: 27px;
+    vertical-align: baseline;
+    margin-left: 103px;
+    font-weight: bold;
+}
+#follower{
+    width: 354px;
+    height: 50px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+#follower_head{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#follower_btn{
+    width: 73px;
+    height: 37px;
+    text-align: center;
+    line-height: 34px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+#follower_name{
+    position: absolute;
+    left: 77px;
+    top: 25px;
+    font-size: 20px;
+}

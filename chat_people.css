@@ -1,0 +1,129 @@
+#chat_people{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+}
+#chat_people_back{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 40px;
+}
+#chat_people_content{
+    width: 384px;
+    overflow-y: scroll;
+}
+#chat_btn{
+    width: 73px;
+    height: 37px;
+    text-align: center;
+    line-height: 34px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+#chat_page{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+}
+#chat_page_back{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 40px;
+}
+#chat_man_nickname{
+    height: 30px;
+    display: inline-block;
+    font-size: 40px;
+}
+#chat_page_content{
+    width: 384px;
+    overflow-y: scroll;
+}
+#chat_page_head{
+    width: 384px;
+    height: 50px;
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+}
+#chat_page_content_bottom{
+    width: 384px;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+}
+#chat_page_content_input{
+    width: 300px;
+    height: 40px;
+    float: left;
+}
+#chat_page_content_btn{
+    width: 60px;
+    height: 40px;
+    float: left;
+}
+#leftdiv{
+    width: 384px;
+    height: 80px;
+}
+#userimg{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: left;
+}
+#userchat{
+    height: 55px;
+    margin-left: 15px;
+    border-radius: 5px;
+    float: left;
+    line-height: 55px;
+    background-color: #fff;
+    border: 1px solid grey;
+}
+#rightdiv{
+    width: 384px;
+    height: 80px;
+}
+#userimg1{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: right;
+}
+#userchat1{
+    height: 55px;
+    margin-right: 15px;
+    border-radius: 5px;
+    float: right;
+    line-height: 55px;
+    background-color: #fff;
+    border: 1px solid grey;
+}
+#chat_people_main{
+    width: 384px;
+    height: 80px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+#chat_people_img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: left;
+}
+#chat_people_main_div{
+    height: 55px;
+    float: left;
+}
+#chat_page_content_content{
+    width: 384px;
+    height: 660px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,296 @@
+#recommend_page_main{
+    width: 384px;
+    height: 768px;
+    display: none;
+    position: relative;
+    overflow-y: scroll;
+}
+#recommend_page_main_header{
+    width: 384px;
+    height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    z-index: 100
+}
+#recommend_page_main_back{
+    width: 40px;
+    height: 40px;
+    float: left;
+    font-family: 'icomoon';
+    font-size: 40px;
+}
+#recommend_page_main_head{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+}
+#recommend_page_main_nickname{
+    height: 40px;
+    float: left;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+#recommend_page_main_btn{
+    width: 50px;
+    height: 30px;
+    float: right;
+}
+#recommend_page_main_picture{
+    width: 384px;
+    height: 384px;
+    background-color: #fff;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+#recommend_page_main_picture ul{
+    height: 384px;
+    width: 5000px;
+}
+#recommend_page_main_picture li{
+    width: 384px;
+    height: 384px;
+    float: left;
+}
+#recommend_page_main_picture li img{
+    width: 384px;
+}
+#circle{
+    width: 384px;
+    height: 40px;
+}
+#circle li{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: black;
+    float: left;
+}
+.current{
+    background-color: red;
+}
+#recommend_page_main_bottom{
+    height: 35px;
+    border-bottom: 1px solid #000;
+}
+#recommend_page_main_bottom_span1{
+    float: left;
+}
+#recommend_page_main_bottom_span2{
+    float: right;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+}
+#recommend_page_main_title{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+#recommend_page_main_discuss{
+    width: 384px;
+    height: 40px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+#recommend_page_main_discuss_head{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+}
+#recommend_page_main_discuss_input{
+    width: 280px;
+    height: 30px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 17px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#recommend_page_main_content_p{
+    font-size: 15px;
+    color: #000;
+}
+#recommend_page_main_tag{
+    font-size: 15px;
+    color: blueviolet;
+}
+#recommend_page_main_discussion{
+    width: 384px;
+}
+#recommend_page_main_discussion_number{
+    font-size: 15px;
+}
+#recommend_page_main_discussion_div{
+    width: 384px;
+    margin-top: 10px;
+}
+#recommend_page_main_discussion_head{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+}
+#recommend_page_main_discussion_head1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 55px;
+}
+#recommend_page_main_discussion_like{
+    font-family: 'icomoon';
+    /* float: right; */
+}
+#recommend_page_main_discussion_left1{
+    float: left;
+    width: 250px;
+    height: 50px;
+}
+#recommend_page_main_discussion_right1{
+    float: right;
+    width: 35px;
+    height: 50px;
+    position: relative;
+}
+#recommend_page_main_search_bottom{
+    position: fixed;
+    bottom: 0px;
+    width: 379px;
+    height: 30px;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    background-color: #fff;
+}
+#recommend_page_main_search_bottom_input{
+    width: 210px;
+    height: 30px;
+    float: left;
+    padding-left: 15px;
+    border-radius: 15px;
+}
+#click_search{
+    width: 384px;
+    height: 815px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+#click_search_headdiv{
+    width: 384px;
+    height: 770px;
+}
+#click_search_bottomdiv{
+    width: 354px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    bottom: 0px;
+}
+#click_search_bottomdiv_input{
+    width: 270px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+#click_search_bottomdiv_btn{
+    width: 50px;
+    height: 34px;
+    border-radius: 15px;
+    float: left;
+}
+#recommend_page_left_1{
+    margin-bottom: 12px;
+}
+#recommend_page_main_search_bottom_collection,
+#recommend_page_main_search_bottom_like,
+#recommend_page_main_search_bottom_discuss{
+    width: 45px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    font-family: 'icomoon';
+}
+.recommend_page_main_search_bottom_collection_span_click1{
+    color: yellow;
+}
+.recommend_page_main_search_bottom_collection_span_click2{
+    color: black;
+}
+.current{
+    background-color: aqua;
+}
+#recommend_page_main_picture_ul{
+    position: absolute;
+}
+#click_search2{
+    width: 384px;
+    height: 815px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+#click_search_headdiv2{
+    width: 384px;
+    height: 770px;
+}
+#click_search_bottomdiv2{
+    width: 354px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    bottom: 0px;
+}
+#click_search_bottomdiv_input2{
+    width: 270px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+#click_search_bottomdiv_btn2{
+    width: 50px;
+    height: 34px;
+    border-radius: 15px;
+    float: left;
+}
+#recommend_page_main_discussion_like2{
+    font-family: 'icomoon';
+}
+#delete_discussion_btn{
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    width: 35px;
+}
+#recommend_page_main_discussion_content{
+    overflow-y: scroll;
+    height: 25px;
+}
